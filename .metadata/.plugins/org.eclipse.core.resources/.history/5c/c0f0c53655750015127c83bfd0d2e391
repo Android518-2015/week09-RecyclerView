@@ -1,0 +1,22 @@
+package ca.campbell.simplerecyclerview;
+
+public class Person {
+	String name;
+	int age;
+	int photo;
+	String wikipedia;
+
+	Person(String name, int age, int photo, String wikipedia) {
+		this.name = name;
+		this.age = age;
+		this.photo = photo;
+		this.wikipedia = wikipedia;
+	}
+	
+	Person(String name, int age, int photo) {
+		this.name = name;
+		this.age = age;
+		this.photo = photo;
+		this.wikipedia = "none";
+	}
+}

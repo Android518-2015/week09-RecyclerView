@@ -1,0 +1,50 @@
+package ca.campbell.simplerecyclerview;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.LayoutManager;
+
+public class MainActivity extends Activity {
+    /**
+     * This code is a simple example of using the RecyclerView
+     * @author P Campbell
+     */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		RecyclerView rv;
+		LinearLayoutManager llm;
+		List<Person> people;
+
+		setContentView(R.layout.activity_main);
+        people = initPeople();
+		rv = (RecyclerView)findViewById(R.id.rv);
+		// sure size won't change
+		// this improves performance 
+		rv.setHasFixedSize(true);
+		/* need a LayoutManager
+		*  can extend RecyclerView.LayoutManager class
+		*  simpler to use subclasses
+		*  LinearLayoutManager  (looks like a ListView)
+		*  GridLayoutManager    (looks like a GridView)
+		*  StaggeredGridLayoutManager
+		*/
+		llm = new LinearLayoutManager(this);
+		rv.setLayoutManager(llm);
+		
+	}
+	private List<Person> initPeople() {
+		List <Person> people = new ArrayList<Person>();
+		
+		people.add(new Person("Grace Brewster Murray Hopper d", 86, R.drawable.gmh ));
+		people.add(new Person("Jean Elaine Sammett", 87, R.drawable.jes ));
+		people.add(new Person("Raida Perlman", 64, R.drawable.rp ));
+		people.add(new Person("Frances Elizabeth Allen", 83, R.drawable.fea ));
+		
+		return people;
+	}
+}

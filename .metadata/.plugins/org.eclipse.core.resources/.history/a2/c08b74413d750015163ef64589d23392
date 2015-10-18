@@ -1,0 +1,22 @@
+package ca.campbell.simplerecyclerview;
+
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.CardView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PViewHolder> {
+	public static class PViewHolder extends RecyclerView.ViewHolder {
+		CardView cv;
+		TextView name, age;
+		ImageView photo;
+
+	PViewHolder (View itemView) {
+		super(itemView);
+		cv 
+	}
+
+	}
+
+}

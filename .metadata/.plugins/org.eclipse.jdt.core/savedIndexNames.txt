@@ -1,0 +1,10 @@
+INDEX VERSION 1.127+/home/tricia/week09-RecyclerView/.metadata/.plugins/org.eclipse.jdt.core
+4125001996.index
+1023782912.index
+4290338377.index
+45674419.index
+890451560.index
+697453263.index
+1158191872.index
+1932359061.index
+1904880240.index

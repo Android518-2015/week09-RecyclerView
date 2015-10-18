@@ -1,0 +1,13 @@
+package ca.campbell.recyclerview;
+
+public class Person {
+	String name;
+	int age;
+	int photo;
+
+	Person(String name, int age, int photo) {
+		this.name = name;
+		this.age = age;
+		this.photo = photo;
+	}
+}

@@ -1,0 +1,38 @@
+package ca.campbell.simplerecyclerview;
+
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.LayoutManager;
+
+public class MainActivity extends Activity {
+    /**
+     * This code is a simple example of using the RecyclerView
+     * @author P Campbell
+     */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		RecyclerView rv;
+		LinearLayoutManager llm;
+		List<Person> people;
+		
+		setContentView(R.layout.activity_main);
+		rv = (RecyclerView)findViewById(R.id.rv);
+		// sure size won't change
+		// this improves performance 
+		rv.setHasFixedSize(true);
+		/* need a LayoutManager
+		*  can extend RecyclerView.LayoutManager class
+		*  simpler to use subclasses
+		*  LinearLayoutManager  (looks like a ListView)
+		*  GridLayoutManager    (looks like a GridView)
+		*  StaggeredGridLayoutManager
+		*/
+		llm = new LinearLayoutManager(this);
+		rv.setLayoutMsanager(llm);
+		
+	}
+}
